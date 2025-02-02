@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.light{
+  --bgColor: #ffffff;
+  --textColor: #0a0a0a;
+  --buttonBg: #020617;
+  --buttonTextColor: #ffffff;
+}
+
+.dark{
+  --bgColor: #0a0a0a;
+  --textColor: #ffffff;
+  --buttonBg: #e2e8f0;
+  --buttonTextColor: #0a0a0a;
+}
+
+.toast-message{
+  font-size: 14px;
+}
