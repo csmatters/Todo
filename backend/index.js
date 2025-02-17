@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
-    res.send("I am Alive");
+    res.send(`I am alive ${process.env.MONGODB_URI}`);
 })
 
 // User routes
