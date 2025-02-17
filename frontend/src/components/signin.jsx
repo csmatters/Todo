@@ -15,7 +15,7 @@ function Signin() {
     let values = {email, password};
 
     try {
-      let response = await fetch("http://localhost:5000/api/users/login", {
+      let response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/login`, {
         method: "POST",
         headers: {
           "Content-Type" : "application/json"

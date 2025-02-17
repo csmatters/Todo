@@ -32,7 +32,7 @@ function AddTodo() {
     const values = {title, description};
     
     try {
-        let response = await fetch("http://localhost:5000/api/todos/create-todo", {
+        let response = await fetch(`${process.env.REACT_APP_API_URL}/api/todos/create-todo`, {
             method: "POST",
             headers: {
                 'Authorization' : `Bearer ${token}`,
@@ -67,7 +67,7 @@ function AddTodo() {
   const handleDelete = async (id) => {
    alert(id);
     try {
-      const response = await fetch(`http://localhost:5000/api/todos/delete/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/todos/delete/${id}`, {
         method: "POST",
         headers:{
           'Authorization' : `Bearer ${token}`
@@ -101,7 +101,7 @@ function AddTodo() {
   useEffect(() => {
     const todoList = async () => {
       try {
-          const response = await fetch("http://localhost:5000/api/todos/todo-lists", {
+          const response = await fetch(`${process.env.REACT_APP_API_URL}/api/todos/todo-lists`, {
             headers: {
               'Authorization': `Bearer ${token}`
             }

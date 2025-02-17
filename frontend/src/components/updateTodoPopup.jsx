@@ -27,7 +27,7 @@ function UpdateTodoPopup({id, pOpen, pClose}) {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/api/todos/update/${id}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/todos/update/${id}`, {
                 method: "POST",
                 headers: {
                     'Authorization' : `Bearer ${token}`,
@@ -63,7 +63,7 @@ function UpdateTodoPopup({id, pOpen, pClose}) {
             if (!id || !token) return; // Prevent request if token or id is missing
     
             try {
-                const response = await fetch(`http://localhost:5000/api/todos/todo/${id}`, {
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/api/todos/todo/${id}`, {
                     headers: {
                         "Authorization": `Bearer ${token}`
                     }
