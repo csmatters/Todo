@@ -9,6 +9,7 @@ function Home() {
                 <h1 className='text-3xl'>A todo-list <br/>Keep Track of Your Daily Tasks</h1>
                 <p className='mt-4'>Keep Your track of daily tasks, work events and house hold chores</p>
                 <p className='mt-5'><Link to="/todo" className="text-primaryColor bg-backgroundColor rounded-lg text-sm px-5 py-2.5">Add Todo</Link></p>
+               <p>{process.env.REACT_APP_API_URL}</p>
             </div>
         </div>
        
